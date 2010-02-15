@@ -1,0 +1,54 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: DmComment
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: dm_comment
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        is_active:
+          label: Active
+        record_model:
+          label: Model
+        record_id:
+          label: Record
+      list:
+        display:
+          - _author_name
+          - record_model
+          - _record_id
+          - body
+          - is_active
+          - created_at
+          - updated_at
+        sort:
+          - created_at
+          - desc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: false
+      filter:
+        display:
+          - id
+          - is_active
+          - record_model
+          - record_id
+          - author_name
+          - author_email
+          - author_website
+          - body
+          - created_at
+          - updated_at
+      form:
+        display:
+          NONE: [record_model, record_id, is_active]
+          Body: [body]
+          Author: [author_name, author_email, author_website]
+        class: DmCommentAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

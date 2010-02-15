@@ -1,0 +1,9 @@
+Project:
+
+  Feedback:
+
+    dmComment:
+      name:                 Comment
+      actions:
+        form:
+        listForPageRecord:  { name: Page comments }

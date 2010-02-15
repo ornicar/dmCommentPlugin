@@ -1,0 +1,13 @@
+DmComment:
+
+  actAs:
+    Timestampable:
+      
+  columns:
+    record_model:     { type: string(255), notnull: true }
+    record_id:        { type: integer, notnull: true }
+    author_name:      { type: string(255), notnull: true }
+    author_email:     { type: string(255), notnull: false }
+    author_website:   { type: string(255), notnull: false, extra: link }
+    body:             { type: clob, notnull: true }
+    is_active:        { type: boolean, notnull: true, default: true }
