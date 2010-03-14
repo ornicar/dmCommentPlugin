@@ -5,7 +5,7 @@ class BasedmCommentActions extends myFrontModuleActions
 
   public function executeFormWidget(dmWebRequest $request)
   {
-    $form = $this->forms['DmComment'];
+    $form = new DmCommentForm();
 
     if ($request->hasParameter($form->getName()))
     {
@@ -34,5 +34,7 @@ class BasedmCommentActions extends myFrontModuleActions
         $this->redirectBack();
       }
     }
+    
+    $this->forms['DmComment'] = $form;
   }
 }
