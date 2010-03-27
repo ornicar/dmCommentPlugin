@@ -27,9 +27,9 @@ class BasedmCommentActions extends myFrontModuleActions
 
         $this->getUser()->setFlash('comment_form_valid', true);
 
-        $this->getService('dispatcher')->notify(new sfEvent($this, 'dm_comment.saved'), array(
+        $this->getService('dispatcher')->notify(new sfEvent($this, 'dm_comment.saved', array(
           'comment' => $form->getObject()
-        ));
+        )));
 
         $this->redirectBack();
       }
