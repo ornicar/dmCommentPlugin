@@ -5,7 +5,7 @@ class BasedmCommentComponents extends myFrontModuleComponents
 
   public function executeForm()
   {
-    $this->form = $this->forms['DmComment'];
+    $this->form = $this->getRequest()->getAttribute('dm_comment_form', new DmCommentForm());
     
     $record = $this->getPageRecord();
 

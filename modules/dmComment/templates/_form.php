@@ -8,7 +8,7 @@ if($sf_user->hasFlash('comment_form_valid'))
 }
 
 // open the form tag with a dm_comment_form css class
-echo $form->open();
+echo $form->open('action=+/dmComment/submit');
 
 // write name label, field and error message
 echo $form['author_name']->label()->field()->error();
@@ -28,6 +28,8 @@ if($form->isCaptchaEnabled())
 }
 
 echo $form->renderHiddenFields();
+
+echo _tag('input name="dm_page_slug" type=hidden value='.$dm_page->slug);
 
 // change the submit button text
 echo _tag('div.submit_wrap', $form->submit('Send'));
