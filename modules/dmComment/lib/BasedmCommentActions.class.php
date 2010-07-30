@@ -17,7 +17,7 @@ class BasedmCommentActions extends myFrontModuleActions
         $this->getUser()->setFlash('comment_form_valid', true);
         $this->getService('dispatcher')->notify(new sfEvent($this, 'dm_comment.saved', array('comment' => $form->getObject())));
 
-        $this->redirectBack();
+        return $this->redirectAfterValidCommentSubmitted($form->getObject());
       }
     }
 
@@ -25,6 +25,11 @@ class BasedmCommentActions extends myFrontModuleActions
     $request->setAttribute('dm_comment_form', $form);
     // forward to the page
     return $this->forwardToSlug($request->getParameter('dm_page_slug'));
+  }
+
+  protected function redirectAfterValidCommentSubmitted(DmComment $comment)
+  {
+      return $this->redireckBack();
   }
 
   protected function bindForm(sfForm $form, sfWebRequest $request)
