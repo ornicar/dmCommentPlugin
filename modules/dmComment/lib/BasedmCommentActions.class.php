@@ -29,7 +29,7 @@ class BasedmCommentActions extends myFrontModuleActions
 
   protected function redirectAfterValidCommentSubmitted(DmComment $comment)
   {
-      return $this->redireckBack();
+      return $this->redirectBack();
   }
 
   protected function bindForm(sfForm $form, sfWebRequest $request)
