@@ -1,0 +1,39 @@
+/* comments */
+
+.dm_comment_list_for_page_record .element {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #E5F0FB;
+  margin-bottom: 0.5em;
+}
+
+.dm_comment_list_for_page_record .elements {
+  padding-top: 10px;
+}
+
+.dm_comment_list_for_page_record .about {
+}
+
+.dm_comment_list_for_page_record .infos {
+  float: left;
+  margin-left:5px;
+}
+
+.dm_comment_list_for_page_record .author {
+  font-weight: bold;
+  font-style: italic;
+  margin: 0;
+}
+
+.dm_comment_list_for_page_record .date {
+  font-style: italic;
+}
+
+.dm_comment_list_for_page_record .gravatar {
+  float: left;
+}
+
+.dm_comment_list_for_page_record .body {
+  display:block;
+  clear:both;
+  margin-left: 5px;
+}

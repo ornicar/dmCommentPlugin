@@ -4,7 +4,8 @@ It packages
 - two front widgets: "Form" and "Page comments"
 - an admin interface to manage comments
 Integrates recaptcha validation.
-The plugin is fully extensible. Only works with [Diem 5.0](http://diem-project.org/) installed.
+Integrates Gravatar support
+The plugin is fully extensible. Only works with [Diem 5.0 or higher](http://diem-project.org/) installed.
 
 Documentation
 -------------
